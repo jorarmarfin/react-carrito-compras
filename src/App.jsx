@@ -2,6 +2,8 @@ import logo from '/images/logo.svg';
 import {IconCart} from "./ui/index.js";
 import {useDispatch} from "react-redux";
 import {addProducts} from "./store/slices/CartSlice.jsx";
+import {toast, ToastContainer} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const data = [
     {
@@ -92,9 +94,16 @@ const data = [
 
 export const App = ()=> {
     const dispatch = useDispatch();
+    const notify = () => {
+        toast.success("Producto agregado !", {
+            position: "top-center"
+        });
+    }
+
 
     const handleAddProduct = (product) => {
         dispatch(addProducts(product));
+        notify();
     }
 
     return (
@@ -122,6 +131,7 @@ export const App = ()=> {
                         ))
                 }
             </div>
+            <ToastContainer />
 
         </div>
 
