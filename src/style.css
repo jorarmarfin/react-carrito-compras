@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+    @apply text-5xl py-3 font-bold text-CustomOrange;
+}
+h2 {
+    @apply text-2xl font-bold ;
+}
+p {
+    @apply text-lg;
+}
+ul {
+    @apply list-disc list-inside;
+}
+ul>li {
+    @apply text-sm;
+}
+
+.table th, .table td {
+    @apply border border-gray-400 px-4 py-4;
+}
+
+.table tbody tr:nth-child(2n+1) {
+    @apply bg-gray-200;
+}
+.bg-img-header {
+    background-image: url('/src/assets/images/header.jpg');
+}
+.card {
+    @apply bg-white shadow-md rounded-lg p-6;
+}
