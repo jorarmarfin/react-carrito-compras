@@ -24,7 +24,7 @@ ul>li {
 
 
 .bg-img-header {
-    background-image: url('/src/assets/images/header.jpg');
+    background-image: url('/public/images/header.jpg');
 }
 .card {
     @apply bg-white shadow-md rounded-lg p-6;
