@@ -1,9 +1,9 @@
 import {configureStore} from "@reduxjs/toolkit";
-import {CounterSlice} from "./slices/CounterSlice.jsx";
+import {CartSlice} from "./slices/CartSlice.jsx";
 
 export const store = configureStore({
     reducer: {
-        counter: CounterSlice.reducer,
+        Cart: CartSlice.reducer,
 
     },
     // middleware: (getDefaultMiddleware) => getDefaultMiddleware({
